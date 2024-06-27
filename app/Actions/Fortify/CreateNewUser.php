@@ -2,11 +2,12 @@
 
 namespace App\Actions\Fortify;
 
+use App\Models\Role;
 use App\Models\User;
+use Laravel\Jetstream\Jetstream;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Laravel\Fortify\Contracts\CreatesNewUsers;
-use Laravel\Jetstream\Jetstream;
 
 class CreateNewUser implements CreatesNewUsers
 {
@@ -24,6 +25,7 @@ class CreateNewUser implements CreatesNewUsers
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => Hash::make($input['password']),
             'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['accepted', 'required'] : '',
+            'role' => ['required', 'in:Estudiante,Profesor,Personal Administrativo'],
         ])->validate();
 
         $user = User::create([
@@ -31,9 +33,9 @@ class CreateNewUser implements CreatesNewUsers
             'email' => $input['email'],
             'password' => Hash::make($input['password']),
         ]);
-        
-        // Asignar rol de "Estudiante" por defecto
-        $user->assignRole('Estudiante');
+
+        $role = Role::where('name', $input['role'])->first();
+        $user->roles()->attach($role);
 
         return $user;
     }
