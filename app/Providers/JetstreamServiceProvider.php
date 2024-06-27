@@ -39,5 +39,26 @@ class JetstreamServiceProvider extends ServiceProvider
             'update',
             'delete',
         ]);
+
+        Jetstream::role('estudiante', __('Estudiante'), [
+            'ver_calificaciones',
+            'inscribir_cursos',
+            'enviar_tareas',
+        ]);
+        
+        Jetstream::role('profesor', __('Profesor'), [
+            'crear_curso',
+            'editar_curso',
+            'eliminar_curso',
+            'ver_calificaciones_estudiantes',
+            'asignar_calificaciones',
+        ]);
+        
+        Jetstream::role('administrador', __('Administrador'), [
+            // Permisos de administrador que engloban a los demás roles
+            'estudiante.*', // Permisos de estudiante con notación wildcard
+            'profesor.*', // Permisos de profesor con notación wildcard
+            'gestionar_usuarios', // Permisos específicos de administrador
+        ]);
     }
 }
