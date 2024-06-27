@@ -1,9 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminUserController;
 
 Route::get('/', function () {
-    return view('estudiante');
+    return view('welcome');
 });
 
 Route::middleware([
@@ -16,20 +17,9 @@ Route::middleware([
     })->name('dashboard');
 });
 
-Route::middleware(['auth', 'role:Profesor'])->group(function () {
-    Route::get('/profesor', function () {
-        return 'Página para Profesores';
-    });
-});
 
-Route::middleware(['auth', 'role:Estudiante'])->group(function () {
-    Route::get('/estudiante', function () {
-        return 'Página para Estudiantes';
-    });
-});
+Route::middleware(['auth', 'role:Personal Administrativo'])->prefix('admin')->name('admin.')->group(function () {
+    // Otras rutas para el administrador
 
-Route::middleware(['auth', 'role:Personal Administrativo'])->group(function () {
-    Route::get('/admin', function () {
-        return 'Página para Personal Administrativo';
-    });
+    Route::view('/Administrador', 'PersonalAdministrativo.indexAdmin')->name('indexAdmin');
 });
