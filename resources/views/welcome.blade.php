@@ -73,6 +73,7 @@
                             <h3><a href="#"> Laboratorio Multimedia</a></h3>
                         </header>
                         <p>El Laboratorio de Multimedia está equipado con herramientas y software de última generación para la creación y edición de contenido digital.</p>
+                        <hr>
                     </article>
 
                     <article>
@@ -81,6 +82,7 @@
                             <h3><a href="#"> Laboratorio de Redes </a></h3>
                         </header>
                         <p>El Laboratorio de Redes está dedicado al estudio y la práctica de diversas tecnologías de redes, incluyendo LAN, WAN, y tecnologías inalámbricas.</p>
+                        <hr>
                     </article>
 
                     <article>

@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('administrativo');
+    return view('welcome');
 });
 
 Route::middleware([
