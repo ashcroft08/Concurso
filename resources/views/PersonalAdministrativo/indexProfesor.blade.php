@@ -129,67 +129,6 @@
         </div>
     </div>
     <!-- Mensaje de éxito -->
-    @if (session('success'))
-        <script>
-            const Toast = Swal.mixin({
-                toast: true,
-                position: 'top-end',
-                iconColor: 'white',
-                customClass: {
-                    popup: 'colored-toast',
-                },
-                showConfirmButton: false,
-                timer: 2500,
-                timerProgressBar: true,
-            })
-            Toast.fire({
-                icon: 'success',
-                title: "{{ session('success') }}",
-            })
-        </script>
-    @endif
-
-    <!-- Mensaje de éxito -->
-    @if (session('info'))
-        <script>
-            const Toast = Swal.mixin({
-                toast: true,
-                position: 'top-end',
-                iconColor: 'white',
-                customClass: {
-                    popup: 'colored-toast',
-                },
-                showConfirmButton: false,
-                timer: 3500,
-                timerProgressBar: true,
-            })
-            Toast.fire({
-                icon: 'info',
-                title: "{{ session('info') }}",
-            })
-        </script>
-    @endif
-
-    <!-- Mensaje de éxito -->
-    @if (session('warning'))
-        <script>
-            const Toast = Swal.mixin({
-                toast: true,
-                position: 'top-end',
-                iconColor: 'white',
-                customClass: {
-                    popup: 'colored-toast',
-                },
-                showConfirmButton: false,
-                timer: 2500,
-                timerProgressBar: true,
-            })
-            Toast.fire({
-                icon: 'warning',
-                title: "{{ session('warning') }}",
-            })
-        </script>
-    @endif
 </body>
 
 </html>
