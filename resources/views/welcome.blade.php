@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Code</title>
+    <title>Universidad Code</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link href="{{ asset('css/main.css') }}" rel="stylesheet"  />
@@ -56,8 +56,7 @@
                         <header>
                             <h3><a href="#"> Laboratorio Cisco </a></h3>
                         </header>
-                        <p> Solicita la reserva de un laboratorio.</p>
-                        <p> Tenemos laboratorios en las siguientes áreas: </p>
+                        <p> Nuestro Laboratorio de Cisco está equipado con routers, switches y otros dispositivos de red avanzados, ideal para quienes buscan certificaciones Cisco</p>
                     </article>
 
                     <article>
@@ -65,7 +64,7 @@
                         <header>
                             <h3><a href="#"> Laboratorio Cisco 2</a></h3>
                         </header>
-                        <p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+                        <p>El Laboratorio de Cisco 2 complementa nuestro primer laboratorio, ofreciendo más espacio y equipos adicionales para acomodar un mayor número de estudiantes y proyectos simultáneos. </p>
                     </article>
 
                     <article>
@@ -73,7 +72,7 @@
                         <header>
                             <h3><a href="#"> Laboratorio Multimedia</a></h3>
                         </header>
-                        <p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+                        <p>El Laboratorio de Multimedia está equipado con herramientas y software de última generación para la creación y edición de contenido digital.</p>
                     </article>
 
                     <article>
@@ -81,7 +80,7 @@
                         <header>
                             <h3><a href="#"> Laboratorio de Redes </a></h3>
                         </header>
-                        <p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+                        <p>El Laboratorio de Redes está dedicado al estudio y la práctica de diversas tecnologías de redes, incluyendo LAN, WAN, y tecnologías inalámbricas.</p>
                     </article>
 
                     <article>
@@ -89,7 +88,7 @@
                         <header>
                             <h3><a href="#"> Laboratorio de Redes 2 </a></h3>
                         </header>
-                        <p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+                        <p>Este laboratorio se centra en el diseño y la implementación avanzada de redes, ofreciendo a los estudiantes la oportunidad de trabajar con tecnologías emergentes y soluciones de red innovadoras. </p>
                     </article>
                 </div>
             </section>
